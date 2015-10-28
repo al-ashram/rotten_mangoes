@@ -18,10 +18,9 @@ img {
 
 footer {
   position: fixed;
-  background-color: white;
   bottom: 0;
   width: 100%;
   text-align: center;
-  border: 3px solid red;
+  color: red;
 }
 
