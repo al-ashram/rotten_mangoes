@@ -1,0 +1,6 @@
+<h1>Admin Stuff</h1>
+
+<%= link_to "Bak to All movies", movies_path %><br/>
+<% @users.each do |u| %>
+<p><%= u.admin %></p>
+<% end %>

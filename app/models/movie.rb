@@ -13,10 +13,6 @@ class Movie < ActiveRecord::Base
 
   def review_average
     reviews.size != 0 ? reviews.sum(:rating_out_of_ten)/reviews.size : 0
-       
-    # else
-      
-    # end
   end
 
   protected 
