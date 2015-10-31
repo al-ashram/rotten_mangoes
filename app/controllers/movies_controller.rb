@@ -1,6 +1,10 @@
 class MoviesController < ApplicationController
+  
   def index
-    @movies = Movie.all
+      @movies = Movie.all
+      @movies = @movies.search_by_title(params[:search_title]) if !params[:search_title].blank?
+      @movies = @movies.search_by_director(params[:search_director]) if !params[:search_director].blank?
+      @movies = @movies.search_by_duration(params[:search_duration]) if !params[:search_duration].blank?
   end
 
   def show

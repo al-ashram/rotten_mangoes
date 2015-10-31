@@ -15,6 +15,10 @@ class Movie < ActiveRecord::Base
     reviews.size != 0 ? reviews.sum(:rating_out_of_ten)/reviews.size : 0
   end
 
+  scope :search_by_title, ->(title) { where("title LIKE ?", title) }
+  scope :search_by_director, ->(director) { where("director LIKE ?", director)}
+  scope :search_by_duration, ->(duration) { where("runtime_in_minutes #{duration}")}
+
   protected 
 
   def release_date_is_not_in_the_future

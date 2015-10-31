@@ -36,6 +36,8 @@ end
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'kaminari'
+gem 'pry'
+gem 'byebug'
 
 # Use unicorn as the app server
 # gem 'unicorn'
